@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body style="text-align: center; background-color: rgba(230, 230, 250, 0.331);">
+    <header>
+      <h1>Order Tab</h1>
+    </header>
+    <section class="container">
+      <form id="my-form" onsubmit="onSubmit(event)">
+        <div class="form-group"></div>
+        <div>
+          <label for="quantity">Menu item Price</label>
+          <input  id="amount" name="quantity" />
+        </div>
+        <div>
+          <label for="text">Choose menu item</label>
+          <input type="text" name="description" id="description" />
+        </div>
+        <label for="category">Choose a table</label>
+        <select name="category" id="category">
+          <option value="Table1">Table 1</option>
+          <option value="Table2">Table 2</option>
+          <option value="Table3">Table 3</option>
+        </select>
+        <input id="submit_btn" class="btn btn-primary" type="submit" value="Add item" /><hr>
+      </form>
+      <ul id="userList"></ul>
+      <div>
+        <div id="Table1"><h4><b>Table 1</b></h4></div><hr>
+        <div id="Table2"><h4><b>Table 2</b></h4></div><hr>
+        <div id="Table3"><h4><b>Table 3</b></h4></div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js"></script>
+   <script src="script.js"></script>
+    
+  </body>
+</html>
